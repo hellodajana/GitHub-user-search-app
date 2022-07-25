@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon-32x32.png"
+    />
+    <title>GitHub user search app</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container">
+      <header>
+        <h1>devfinder</h1>
+        <div class="container__color_mode" id="color-mode">
+          <p class="container__color_mode-text" id="text-mode">Dark</p>
+          <img
+            class="container__color_mode-icon"
+            id="icon-mode"
+            src="./src/assets/icon-moon.svg"
+            alt="Change to dark mode"
+          />
+        </div>
+      </header>
+      <main>
+        <div class="container__app">
+          <div class="container__app-search">
+            <img
+              src="./src/assets/icon-search.svg"
+              alt="Search icon"
+            />
+            <input
+              type="text"
+              class="container__app-input"
+              id="github-username"
+              name="GitHub username"
+              placeholder="Search GitHub username..."
+            />
+            <p class="container__app-error hidden" id="search-error">
+              No results
+            </p>
+            <button class="container__app-btn" type="submit" id="submit-btn">
+              Search
+            </button>
+          </div>
+          <div class="container__app-profile">
+            <section class="container__app-header">
+              <header class="container__app-main">
+                <img id="avatar" alt="GitHub Avatar" />
+                <div class="container__app-name">
+                  <h2 id="github-name"></h2>
+                  <p id="github-user"></p>
+                </div>
+                <p id="date">Joined</p>
+              </header>
+              <p id="bio">This profile has no bio</p>
+            </section>
+            <ul class="user-stats">
+              <li>
+                <h4 class="user-stats__title">Repos</h4>
+                <h2 class="user-stats__title"></h2>
+              </li>
+              <li>
+                <h4 class="user-stats__title">Followers</h4>
+                <h2 class="user-stats__title"></h2>
+              </li>
+              <li>
+                <h4 class="user-stats__title">Following</h4>
+                <h2 class="user-stats__title"></h2>
+              </li>
+            </ul>
+            <section class="container__app-socials">
+              <div class="container__app-socials-info">
+                <div class="bottom-icons"><img src="./src/assets/icon-location.svg" alt=""></div>
+                <p id="location"></p>
+              </div>
+              <div class="container__app-socials-info">
+                <div class="bottom-icons"><img src="./src/assets/icon-website.svg" alt=""></div>
+                <p id="page"></p>
+              </div>
+              <div class="container__app-socials-info">
+                <div class="bottom-icons"><img src="./src/assets/icon-twitter.svg" alt=""></div>
+                <p id="twitter"></p>
+              </div>
+              <div class="container__app-socials-info">
+                <div class="bottom-icons"><img src="./src/assets/icon-company.svg" alt=""></div>
+                <p id="company"></p>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
