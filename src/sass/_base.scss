@@ -1,3 +1,5 @@
+@import "_color-themes";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +8,8 @@
 
 body {
   font-family: "Space Mono", monospace;
-  //   background-color:
-  //   color:
-  //   font-size: 16px;
-  //   font-weight: 700;
+  background: var(--background);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 25px;
 }

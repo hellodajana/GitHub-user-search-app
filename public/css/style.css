@@ -1,3 +1,25 @@
+:root {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(217, 20%, 51%);
+  --active-theme-icon: hsl(217, 21%, 21%);
+  --text: hsl(217, 35%, 45%);
+  --bold-text: hsl(217, 21%, 21%);
+  --stats-menu: hsl(227, 100%, 98%);
+  --container-background: hsl(0, 0%, 100%);
+  --background: hsl(227, 100%, 98%);
+}
+
+.dark-theme {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(0, 0%, 10%);
+  --active-theme-icon: 90A4D4;
+  --text: hsl(0, 0%, 100%);
+  --bold-text: hsl(0, 0%, 100%);
+  --stats-menu: hsl(220, 40%, 13%);
+  --container-background: hsl(222, 41%, 20%);
+  --background: hsl(220, 40%, 13%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,4 +28,160 @@
 
 body {
   font-family: "Space Mono", monospace;
+  background: var(--background);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+:root {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(217, 20%, 51%);
+  --active-theme-icon: hsl(217, 21%, 21%);
+  --text: hsl(217, 35%, 45%);
+  --bold-text: hsl(217, 21%, 21%);
+  --stats-menu: hsl(227, 100%, 98%);
+  --container-background: hsl(0, 0%, 100%);
+  --background: hsl(227, 100%, 98%);
+}
+
+.dark-theme {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(0, 0%, 10%);
+  --active-theme-icon: 90A4D4;
+  --text: hsl(0, 0%, 100%);
+  --bold-text: hsl(0, 0%, 100%);
+  --stats-menu: hsl(220, 40%, 13%);
+  --container-background: hsl(222, 41%, 20%);
+  --background: hsl(220, 40%, 13%);
+}
+
+.container {
+  margin: 0 24px;
+}
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 31px 0 36px 0;
+}
+.container h1 {
+  color: var(--bold-text);
+}
+.container__color_mode {
+  display: flex;
+}
+.container__text {
+  margin-right: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.container__icon {
+  width: 20px;
+  height: 20px;
+}
+
+:root {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(217, 20%, 51%);
+  --active-theme-icon: hsl(217, 21%, 21%);
+  --text: hsl(217, 35%, 45%);
+  --bold-text: hsl(217, 21%, 21%);
+  --stats-menu: hsl(227, 100%, 98%);
+  --container-background: hsl(0, 0%, 100%);
+  --background: hsl(227, 100%, 98%);
+}
+
+.dark-theme {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(0, 0%, 10%);
+  --active-theme-icon: 90A4D4;
+  --text: hsl(0, 0%, 100%);
+  --bold-text: hsl(0, 0%, 100%);
+  --stats-menu: hsl(220, 40%, 13%);
+  --container-background: hsl(222, 41%, 20%);
+  --background: hsl(220, 40%, 13%);
+}
+
+.search-bar {
+  background: var(--container-background);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  margin-bottom: 16px;
+}
+.search-bar img {
+  height: 20px;
+  width: 20px;
+  margin: 0px 8.95px 0px 16px;
+}
+.search-bar__input {
+  border: none;
+  font-family: "Space Mono", monospace;
+  width: 184px;
+  height: 25px;
+  font-size: 13px;
+  margin-right: 7px;
+  background: transparent;
+  color: var(--text);
+}
+.search-bar__input:focus {
+  outline: none;
+}
+.search-bar__error {
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+.search-bar__btn {
+  width: 84px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(217, 20%, 51%);
+  --active-theme-icon: hsl(217, 21%, 21%);
+  --text: hsl(217, 35%, 45%);
+  --bold-text: hsl(217, 21%, 21%);
+  --stats-menu: hsl(227, 100%, 98%);
+  --container-background: hsl(0, 0%, 100%);
+  --background: hsl(227, 100%, 98%);
+}
+
+.dark-theme {
+  --blue: hsl(212, 100%, 50%);
+  --theme-icon: hsl(0, 0%, 10%);
+  --active-theme-icon: 90A4D4;
+  --text: hsl(0, 0%, 100%);
+  --bold-text: hsl(0, 0%, 100%);
+  --stats-menu: hsl(220, 40%, 13%);
+  --container-background: hsl(222, 41%, 20%);
+  --background: hsl(220, 40%, 13%);
+}
+
+.container-profile {
+  background: var(--container-background);
+  border-radius: 15px;
+  padding: 32px 24px 48px 24px;
+}
+.container-profile__main {
+  display: grid;
+}
+.container-profile__avatar {
+  width: 70px;
+  height: 70px;
+  background: hsl(227deg, 100%, 98%);
+  border-radius: 50%;
 }

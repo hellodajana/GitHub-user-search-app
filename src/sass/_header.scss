@@ -1,0 +1,27 @@
+@import "_color-themes";
+
+.container {
+  margin: 0 24px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 31px 0 36px 0;
+  }
+  h1 {
+    color: var(--bold-text);
+  }
+  &__color_mode {
+    display: flex;
+  }
+  &__text {
+    margin-right: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
