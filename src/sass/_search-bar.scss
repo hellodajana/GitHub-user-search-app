@@ -5,6 +5,7 @@
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-radius: 15px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   margin-bottom: 16px;
@@ -12,6 +13,10 @@
     height: 20px;
     width: 20px;
     margin: 0px 8.95px 0px 16px;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
   }
   &__input {
     border: none;
@@ -33,6 +38,7 @@
     font-size: 12px;
   }
   &__btn {
+    margin-right: 10px;
     width: 84px;
     height: 46px;
     border-radius: 10px;

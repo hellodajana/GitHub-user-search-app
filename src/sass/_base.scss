@@ -1,4 +1,5 @@
 @import "_color-themes";
+@import "_mixins";
 
 * {
   box-sizing: border-box;
@@ -12,4 +13,7 @@ body {
   color: var(--text);
   font-size: 13px;
   line-height: 25px;
+  @include tablet {
+    font-size: 15px;
+  }
 }

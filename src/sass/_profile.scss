@@ -1,10 +1,14 @@
 @import "_color-themes";
+@import "_mixins";
 
 .container-profile {
   background: var(--container-background);
   border-radius: 15px;
   padding: 32px 24px 48px 24px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  @include tablet {
+    padding: 40px;
+  }
   &__main {
     display: grid;
     gap: 10px;
@@ -15,16 +19,30 @@
     background: hsl(227, 100%, 98%);
     border-radius: 50%;
     grid-column: 1 / 2;
+    @include tablet {
+      width: 117px;
+      height: 117px;
+    }
   }
   &__name {
-    grid-column: 2 / 4;
+    grid-column: 2 / 8;
+    @include tablet {
+      margin-top: 12px;
+    }
     & h2 {
       color: var(--bold-text);
       font-size: 16px;
+      @include tablet {
+        font-size: 26px;
+        margin-bottom: 4px;
+      }
     }
     & p {
       color: var(--blue);
       font-size: 13px;
+      @include tablet {
+        font-size: 16px;
+      }
     }
   }
   &__date {
@@ -44,32 +62,79 @@
     & h4 {
       font-weight: 400;
       font-size: 11px;
+      @include tablet {
+        font-size: 13px;
+      }
     }
     & h2 {
       color: var(--bold-text);
       font-size: 16px;
+      @include tablet {
+        font-size: 22px;
+      }
     }
   }
   &__socials {
     display: grid;
     gap: 10px;
     & .social-icons {
-      grid-column: 1 / 2;
+      grid-column: 1 / 5;
     }
     & .social-par {
       grid-column: 2 / 6;
     }
+
     & .row-1 {
       grid-row: 1 / 2;
+      @include tablet {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+    & .par-1 {
+      @include tablet {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+      }
     }
     & .row-2 {
       grid-row: 2 / 3;
+      @include tablet {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+    & .par-2 {
+      @include tablet {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+      }
     }
     & .row-3 {
       grid-row: 3 / 4;
+      @include tablet {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+      }
+    }
+    & .par-3 {
+      @include tablet {
+        grid-column: 5 / 7;
+        grid-row: 1 / 2;
+      }
     }
     & .row-4 {
       grid-row: 4 / 4;
+      @include tablet {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+      }
+    }
+    & .par-4 {
+      @include tablet {
+        grid-column: 5 / 7;
+        grid-row: 2 / 3;
+      }
     }
   }
 }
