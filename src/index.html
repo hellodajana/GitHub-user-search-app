@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -34,10 +37,7 @@
       <main>
         <div class="container-app">
           <div class="search-bar">
-            <img
-              src="assets/icon-search.svg"
-              alt="Search icon"
-            />
+            <img src="assets/icon-search.svg" alt="Search icon" />
             <input
               type="text"
               class="search-bar__input"
@@ -45,9 +45,7 @@
               name="GitHub username"
               placeholder="Search GitHub username..."
             />
-            <p class="search-bar__error hidden" id="search-error">
-              No results
-            </p>
+            <p class="search-bar__error hidden" id="search-error">No results</p>
             <button class="search-bar__btn" type="submit" id="submit-btn">
               Search
             </button>
@@ -55,45 +53,59 @@
           <div class="container-profile">
             <section class="container-profile__header">
               <header class="container-profile__main">
-                <div id="avatar" class="container-profile__avatar" alt="GitHub Avatar"></div> 
+                <div
+                  id="avatar"
+                  class="container-profile__avatar"
+                  alt="GitHub Avatar"
+                ></div>
                 <div class="container-profile__name">
-                  <h2 id="github-name"></h2>
-                  <p id="github-user"></p>
+                  <h2 id="github-name">The Octocat</h2>
+                  <p id="github-user">@octocat</p>
+                  <div class="container-profile__date" id="date">
+                    Joined 25 Jan 2011
+                  </div>
                 </div>
-                <p id="date">Joined</p>
               </header>
-              <p id="bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+              <p id="bio">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+                odio. Quisque volutpat mattis eros.
+              </p>
             </section>
             <ul class="user-stats">
               <li>
                 <h4 class="user-stats__title">Repos</h4>
-                <h2 class="user-stats__title"></h2>
+                <h2 class="user-stats__title">8</h2>
               </li>
               <li>
                 <h4 class="user-stats__title">Followers</h4>
-                <h2 class="user-stats__title"></h2>
+                <h2 class="user-stats__title">3938</h2>
               </li>
               <li>
                 <h4 class="user-stats__title">Following</h4>
-                <h2 class="user-stats__title"></h2>
+                <h2 class="user-stats__title">9</h2>
               </li>
             </ul>
-            <section class="container__app-socials">
-              <div class="container__app-socials-info">
-                <div class="bottom-icons"><img src="assets/icon-location.svg" alt=""></div>
-                <p id="location"></p>
+
+            <section class="container-profile__socials">
+              <div class="social-icons row-1">
+                <img src="assets/icon-location.svg" alt="" />
               </div>
-              <div class="container__app-socials-info">
-                <div class="bottom-icons"><img src="assets/icon-website.svg" alt=""></div>
-                <p id="page"></p>
+              <p class="social-par row-1" id="location">San Francisco</p>
+
+              <div class="social-icons row-2">
+                <img src="assets/icon-website.svg" alt="" />
               </div>
-              <div class="container__app-socials-info">
-                <div class="bottom-icons"><img src="assets/icon-twitter.svg" alt=""></div>
-                <p id="twitter"></p>
+              <p class="social-par row-2" id="page">https://github.blog</p>
+
+              <div class="social-icons row-3">
+                <img src="assets/icon-twitter.svg" alt="" />
               </div>
-              <div class="container__app-socials-info">
-                <div class="bottom-icons"><img src="assets/icon-company.svg" alt=""></div>
-                <p id="company"></p>
+              <p class="social-par row-3" id="twitter">Not Available</p>
+
+              <div class="social-icons row-4">
+                <img src="assets/icon-company.svg" alt="" />
+              </div>
+              <p class="social-par row-4" id="company">@github</p>
             </section>
           </div>
         </div>
