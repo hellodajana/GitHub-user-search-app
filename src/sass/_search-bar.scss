@@ -13,6 +13,7 @@
   @include desktop {
     margin-bottom: 24px;
   }
+
   img {
     height: 20px;
     width: 20px;
@@ -31,15 +32,24 @@
     margin-right: 7px;
     background: transparent;
     color: var(--text);
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    @include desktop {
+      width: 680px;
+    }
+    @include tablet {
+      width: 310px;
+    }
   }
-  &__input:focus {
-    outline: none;
-  }
+
   &__error {
     display: none;
     color: red;
-    font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
   }
   &__btn {
     margin-right: 10px;
