@@ -107,11 +107,16 @@
     @include desktop {
       margin-left: 126px;
     }
+
     & .social-icons {
       grid-column: 1 / 5;
     }
     & .social-par {
       grid-column: 2 / 6;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
 
     & .row-1 {

@@ -36,4 +36,9 @@
     width: 20px;
     height: 20px;
   }
+  & #theme:hover {
+    cursor: pointer;
+    color: var(--bold-text);
+    filter: brightness(50%); // make moon icon darker
+  }
 }

@@ -52,5 +52,9 @@
     font-size: 14px;
     font-weight: bold;
     font-family: "Space Mono", monospace;
+    &:hover {
+      cursor: pointer;
+      background-color: #60abff;
+    }
   }
 }
