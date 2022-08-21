@@ -44,6 +44,7 @@
                 class="search-bar__input"
                 id="github-username"
                 name="GitHub username"
+                onfocus="this.value=''"
                 placeholder="Search GitHub username..."
               />
               <p class="search-bar__error hidden" id="search-error">
@@ -79,15 +80,15 @@
             <ul class="user-stats">
               <li>
                 <h4 class="user-stats__title">Repos</h4>
-                <h2 class="user-stats__title">8</h2>
+                <h2 class="user-stats__title" id="repo">8</h2>
               </li>
               <li>
                 <h4 class="user-stats__title">Followers</h4>
-                <h2 class="user-stats__title">3938</h2>
+                <h2 class="user-stats__title" id="follower">3938</h2>
               </li>
               <li>
                 <h4 class="user-stats__title">Following</h4>
-                <h2 class="user-stats__title">9</h2>
+                <h2 class="user-stats__title" id="following">9</h2>
               </li>
             </ul>
 
