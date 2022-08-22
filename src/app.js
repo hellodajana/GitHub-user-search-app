@@ -1,5 +1,6 @@
 // color theme
 const theme = document.getElementById("theme");
+const input = document.getElementById("github-username");
 
 theme.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
@@ -23,7 +24,7 @@ function changeImageAndText() {
 const btn = document.getElementById("submit-btn");
 
 const getUser = async () => {
-  const username = document.getElementById("github-username").value;
+  const username = input.value;
   const api_link = `https://api.github.com/users/${username}`;
   const res = await fetch(api_link, { catche: "no-catche" });
   const data = await res.json();
@@ -90,5 +91,13 @@ const getUser = async () => {
     : (company.innerHTML = data.company);
 };
 
+// event listener for button
 btn.addEventListener("click", getUser);
-// add event listener for enter
+
+// event listener for enter
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    btn.click();
+  }
+});
