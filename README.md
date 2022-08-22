@@ -43,11 +43,12 @@ Users should be able to:
 
 - Live Site URL: [Netlify](https://hellodajana-github-user-search.netlify.app/)
 
-## For Developers
+## Getting Started
 
 To start the server, run the following command from the project root:
 
 ```
+npm install
 npm start
 ```
 
