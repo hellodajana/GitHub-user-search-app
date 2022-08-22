@@ -45,10 +45,15 @@ Users should be able to:
 
 ## Getting Started
 
-To start the server, run the following command from the project root:
+First install your dependencies.
 
 ```
 npm install
+```
+
+To start the server, run the following command.
+
+```
 npm start
 ```
 
