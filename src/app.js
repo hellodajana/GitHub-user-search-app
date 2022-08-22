@@ -56,11 +56,8 @@ const getUser = async () => {
   name.innerHTML = data.name;
   user.innerHTML = `@${data.login}`;
 
-  // fix image
   const avatar = document.getElementById("avatar");
-  const profilePic = document.createElement("img");
-  profilePic.src = data.avatar_url;
-  avatar.appendChild(profilePic);
+  avatar.innerHTML = `<img src=${data.avatar_url}"/>`;
 
   // fix month
   const date = document.getElementById("date");
