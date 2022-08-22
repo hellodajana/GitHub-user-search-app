@@ -54,9 +54,9 @@ const getUser = async () => {
   }
 
   name.innerHTML = data.name;
-
   user.innerHTML = `@${data.login}`;
 
+  // fix image
   const avatar = document.getElementById("avatar");
   const profilePic = document.createElement("img");
   profilePic.src = data.avatar_url;
@@ -94,3 +94,4 @@ const getUser = async () => {
 };
 
 btn.addEventListener("click", getUser);
+// add event listener for enter
