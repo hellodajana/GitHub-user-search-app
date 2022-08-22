@@ -1,7 +1,8 @@
-// color theme
 const theme = document.getElementById("theme");
 const input = document.getElementById("github-username");
+const btn = document.getElementById("submit-btn");
 
+// color theme
 theme.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
   changeImageAndText();
@@ -21,14 +22,16 @@ function changeImageAndText() {
 }
 
 // profile search
-const btn = document.getElementById("submit-btn");
-
 const getUser = async () => {
   const username = input.value;
   const api_link = `https://api.github.com/users/${username}`;
   const res = await fetch(api_link, { catche: "no-catche" });
   const data = await res.json();
+  getProfile(data, res);
+};
 
+// show profile
+function getProfile(profile, result) {
   const name = document.getElementById("github-name");
   const user = document.getElementById("github-user");
   const about = document.getElementById("bio");
@@ -41,12 +44,12 @@ const getUser = async () => {
   const company = document.getElementById("company");
 
   const error = document.getElementById("search-error");
-  if (!res.ok) {
+  if (!result.ok) {
     error.style.display = "block";
-    location.innerHTML = "No results";
-    page.innerHTML = "No results";
-    twitter.innerHTML = "No results";
-    company.innerHTML = "No results";
+    location.innerHTML = "Not Available";
+    page.innerHTML = "Not Available";
+    twitter.innerHTML = "Not Available";
+    company.innerHTML = "Not Available";
     repos.innerHTML = "0";
     follower.innerHTML = "0";
     following.innerHTML = "0";
@@ -54,42 +57,42 @@ const getUser = async () => {
     error.style.display = "none";
   }
 
-  name.innerHTML = data.name;
-  user.innerHTML = `@${data.login}`;
+  name.innerHTML = profile.name;
+  user.innerHTML = `@${profile.login}`;
 
   const avatar = document.getElementById("avatar");
-  avatar.innerHTML = `<img src=${data.avatar_url}"/>`;
+  avatar.innerHTML = `<img src=${profile.avatar_url}"/>`;
 
   // fix month
   const date = document.getElementById("date");
-  const currentDate = data.created_at;
+  const currentDate = profile.created_at;
   const formatedDate = currentDate.split("T").shift().split("-");
   date.innerHTML = `Joined ${formatedDate[2]} ${formatedDate[1]} ${formatedDate[0]} `;
 
-  data.bio === null
+  profile.bio === null
     ? (about.innerHTML = "This profile has no bio.")
-    : (about.innerHTML = data.bio);
+    : (about.innerHTML = profile.bio);
 
-  repos.innerHTML = data.public_repos;
-  follower.innerHTML = data.followers;
-  following.innerHTML = data.following;
+  repos.innerHTML = profile.public_repos;
+  follower.innerHTML = profile.followers;
+  following.innerHTML = profile.following;
 
-  data.location === null
+  profile.location === null
     ? (location.innerHTML = "Not Available")
-    : (location.innerHTML = data.location);
+    : (location.innerHTML = profile.location);
 
-  data.blog === ""
+  profile.blog === ""
     ? (page.innerHTML = "Not Available")
-    : (page.innerHTML = data.blog);
+    : (page.innerHTML = profile.blog);
 
-  data.twitter_username === null
+  profile.twitter_username === null
     ? (twitter.innerHTML = "Not Available")
-    : (twitter.innerHTML = data.twitter_username);
+    : (twitter.innerHTML = profile.twitter_username);
 
-  data.company === null
+  profile.company === null
     ? (company.innerHTML = "Not Available")
-    : (company.innerHTML = data.company);
-};
+    : (company.innerHTML = profile.company);
+}
 
 // event listener for button
 btn.addEventListener("click", getUser);
