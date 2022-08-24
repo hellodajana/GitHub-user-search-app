@@ -16,7 +16,7 @@ Users should be able to:
 - See relevant user information based on their search
 - Switch between light and dark themes
 
-#### Continued development
+### Continued development
 
 - Have the correct color scheme chosen for them based on their computer preferences, using Research prefers-color-scheme in CSS.
 - If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
