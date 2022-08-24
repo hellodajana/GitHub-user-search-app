@@ -16,7 +16,7 @@ Users should be able to:
 - See relevant user information based on their search
 - Switch between light and dark themes
 
-# Continued development
+#### Continued development
 
 - Have the correct color scheme chosen for them based on their computer preferences, using Research prefers-color-scheme in CSS.
 - If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
@@ -36,11 +36,11 @@ Users should be able to:
 
 - [Minimum Static Site Setup with Sass | Stephanie Eckles](https://thinkdobecreate.com/articles/minimum-static-site-sass-setup/) - I used this setup to compile SASS.
 
-## Links
+### Links
 
 - Live Site URL: [Netlify](https://hellodajana-github-user-search.netlify.app/)
 
-## Getting Started
+### Getting Started
 
 First install your dependencies.
 
