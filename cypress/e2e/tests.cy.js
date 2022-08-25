@@ -6,10 +6,10 @@ describe("Testing App", () => {
   });
 
   describe("Testing dark mode", () => {
-    it("should change from light to dark theme", () => {
+    it("should change from Dark to Light text", () => {
       cy.get("#theme").click();
       cy.get("#theme-name").contains("Light");
-      // should get sun image instead of moon
+      // add that it should get sun image instead of moon
     });
   });
 
