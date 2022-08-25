@@ -31,6 +31,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JS
+- Cypress
 
 ### Useful resources
 
