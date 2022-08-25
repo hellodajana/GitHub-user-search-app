@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
-  "main": "public/app.js",
+  "main": "public/index.html",
   "author": "5t3ph",
   "scripts": {
     "build:sass": "sass  --no-source-map src/sass:public/css",
@@ -23,8 +23,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
-    "cross-env": "^7.0.3",
     "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.0.17",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
@@ -33,7 +33,11 @@
     "sass": "^1.49.8"
   },
   "browserslist": [
-    "> 0.5%",
-    "not IE 11"
-  ]
+    "last 2 chrome version",
+    "last 2 firefox version",
+    "last 2 safari version"
+  ],
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  }
 }
