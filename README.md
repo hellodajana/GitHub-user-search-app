@@ -15,15 +15,12 @@ Users should be able to:
 - Search for GitHub users by their username
 - See relevant user information based on their search
 - Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
-### Expected behaviour
+### Continued development
 
-- On first load, show the profile information for Octocat.
-- Display an error message (as shown in the design) if no user is found when a new search is made.
+- Have the correct color scheme chosen for them based on their computer preferences, using Research prefers-color-scheme in CSS.
 - If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
-- If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added (as shown in the design). The lorem ipsum text in the designs shows how the bio should look when it is present.
-- If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design).
+- If a GitHub user's bio is empty, or any of the location, website, twitter, or company properties are location, website, twitter, or company properties are empty, show the text "This profile has no bio" / "Not Available" with transparency added.
 - Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
 
 ### Built with
@@ -39,13 +36,19 @@ Users should be able to:
 
 - [Minimum Static Site Setup with Sass | Stephanie Eckles](https://thinkdobecreate.com/articles/minimum-static-site-sass-setup/) - I used this setup to compile SASS.
 
-## Links
+### Links
 
 - Live Site URL: [Netlify](https://hellodajana-github-user-search.netlify.app/)
 
-## For Developers
+### Getting Started
 
-To start the server, run the following command from the project root:
+First install your dependencies.
+
+```
+npm install
+```
+
+To start the server, run the following command.
 
 ```
 npm start
